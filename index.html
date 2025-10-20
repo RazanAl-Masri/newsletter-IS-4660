@@ -8,13 +8,23 @@
 <style>
 /* Preheader hide */
 .preheader { display:none !important; visibility:hidden; opacity:0; color:transparent; height:0; width:0; overflow:hidden; mso-hide:all; }
+
+/* Base helpers for safer wrapping */
+a { word-break: break-word; }
+.button-link { text-decoration:none; display:inline-block; }
+
 /* Mobile tweaks */
 @media only screen and (max-width: 600px){
   .container{ width:100% !important; }
   .stack { display:block !important; width:100% !important; }
+  .col-50{ display:block !important; width:100% !important; max-width:100% !important; }
   .px-24{ padding-left:16px !important; padding-right:16px !important; }
   .hero-title{ font-size:24px !important; line-height:32px !important; }
-  .button{ width:100% !important; }
+  /* Button fixes */
+  .btn { display:block !important; width:100% !important; }
+  .btn a{ display:block !important; width:100% !important; box-sizing:border-box !important; }
+  .btntext{ font-size:15px !important; line-height:20px !important; }
+  .cta-gap{ height:12px !important; line-height:12px !important; }
 }
 </style>
 </head>
@@ -46,7 +56,6 @@ Price dropped to 160,000 €! Fully furnished 3-room apartment with balcony & se
           <tr>
             <td align="center" style="background:#ddd;">
               <a href="https://timondro.com/apartments-for-sale-istanbul/is-4660-furnished-balcony-apartment-with-separate-kitchen-in-the-heart-of-beyoglu-top-choice-for-living-or-investing?utm_source=newsletter&utm_medium=email&utm_campaign=is-4660" target="_blank">
-                <!-- As requested: hero image is 1.jpej -->
                 <img src="1.jpg" alt="Fully Furnished 3-Room Apartment in Beyoğlu" width="600" style="width:100%; max-width:600px; display:block; border:0;">
               </a>
             </td>
@@ -71,7 +80,7 @@ Price dropped to 160,000 €! Fully furnished 3-room apartment with balcony & se
                 <tr>
                   <td style="background:#fef3f0; border:1px solid #f15a29; border-radius:8px; padding:10px 16px;">
                     <span style="font-family:Arial, Helvetica, sans-serif; color:#f15a29; font-size:14px; line-height:18px; font-weight:bold;">
-                      🔥 Limited-Time Price Drop: <s style="opacity:.7;">172,380 €</s> → 160,000 € 
+                      🔥 Limited-Time Price Drop: <s style="opacity:.7;">172,380 €</s> → 160,000 €
                     </span>
                   </td>
                 </tr>
@@ -90,7 +99,7 @@ Price dropped to 160,000 €! Fully furnished 3-room apartment with balcony & se
             </td>
           </tr>
 
-          <!-- Hot Offer Details -->
+          <!-- Property Details -->
           <tr>
             <td class="px-24" style="padding:4px 24px 4px;">
               <h3 style="font-family:Arial, Helvetica, sans-serif; color:#111; font-size:18px; line-height:24px; margin:0 0 8px;">Property at a Glance</h3>
@@ -119,29 +128,33 @@ Price dropped to 160,000 €! Fully furnished 3-room apartment with balcony & se
             </td>
           </tr>
 
-          <!-- Dual CTA: WhatsApp / More Info -->
+          <!-- Dual CTA (mobile-safe) -->
           <tr>
             <td align="center" style="padding:18px 24px 8px;">
               <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                 <tr>
                   <!-- WhatsApp CTA -->
-                  <td align="center" bgcolor="#25D366" style="border-radius:6px;">
-                    <a class="button"
+                  <td class="col-50 btn" align="center" bgcolor="#25D366" style="border-radius:6px;">
+                    <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" arcsize="8%" href="https://wa.me/905358699178?text=Hello%20TIMONDRO%2C%20I%27m%20interested%20in%20the%20Beyo%C4%9Flu%203-room%20apartment%20(IS-4660).%20Please%20send%20more%20details." style="height:44px;v-text-anchor:middle;width:260px;" fillcolor="#25D366" strokecolor="#25D366"><w:anchorlock/><center><![endif]-->
+                    <a class="button-link btntext"
                       href="https://wa.me/905358699178?text=Hello%20TIMONDRO%2C%20I%27m%20interested%20in%20the%20Beyo%C4%9Flu%203-room%20apartment%20(IS-4660).%20Please%20send%20more%20details."
                       target="_blank"
-                      style="font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; color:#ffffff; text-decoration:none; padding:14px 22px; display:inline-block; border-radius:6px;">
+                      style="font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; color:#ffffff; text-decoration:none; padding:14px 22px; display:inline-block; border-radius:6px; box-sizing:border-box; white-space:normal; text-align:center;">
                       WhatsApp Us: +9 (0535) 869 91 78
                     </a>
+                    <!--[if mso]></center></v:roundrect><![endif]-->
                   </td>
-                  <td width="12" style="font-size:0; line-height:0;">&nbsp;</td>
+                  <td class="cta-gap" width="12" style="font-size:0; line-height:0;">&nbsp;</td>
                   <!-- Request More Info CTA -->
-                  <td align="center" bgcolor="#f15a29" style="border-radius:6px;">
-                    <a class="button"
+                  <td class="col-50 btn" align="center" bgcolor="#f15a29" style="border-radius:6px;">
+                    <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" arcsize="8%" href="https://timondro.com/apartments-for-sale-istanbul/is-4660-furnished-balcony-apartment-with-separate-kitchen-in-the-heart-of-beyoglu-top-choice-for-living-or-investing?utm_source=newsletter&utm_medium=email&utm_campaign=is-4660" style="height:44px;v-text-anchor:middle;width:260px;" fillcolor="#f15a29" strokecolor="#f15a29"><w:anchorlock/><center><![endif]-->
+                    <a class="button-link btntext"
                       href="https://timondro.com/apartments-for-sale-istanbul/is-4660-furnished-balcony-apartment-with-separate-kitchen-in-the-heart-of-beyoglu-top-choice-for-living-or-investing?utm_source=newsletter&utm_medium=email&utm_campaign=is-4660"
                       target="_blank"
-                      style="font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; color:#ffffff; text-decoration:none; padding:14px 22px; display:inline-block; border-radius:6px;">
+                      style="font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; color:#ffffff; text-decoration:none; padding:14px 22px; display:inline-block; border-radius:6px; box-sizing:border-box; white-space:normal; text-align:center;">
                       Request More Info & Photos
                     </a>
+                    <!--[if mso]></center></v:roundrect><![endif]-->
                   </td>
                 </tr>
               </table>
@@ -168,7 +181,6 @@ Price dropped to 160,000 €! Fully furnished 3-room apartment with balcony & se
               <p style="font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; line-height:18px; margin:0 0 8px;">
                 © 2025 TIMONDRO. All rights reserved.
               </p>
-              
               <a href="https://timondro.com" target="_blank" style="display:inline-block; text-decoration:none;">
                 <img src="logo.png" width="160" height="60" alt="TIMONDRO" style="display:block; border:0;">
               </a>
